@@ -36,10 +36,9 @@ public class ReactiveExamplesTest {
         //create new person mono
         Mono<Person> personMono = Mono.just(fiona);
 
+        //type transformation
         PersonCommand command = personMono
-                .map(person -> { //type transformation
-                    return new PersonCommand(person);
-                }).block();
+                .map(PersonCommand::new).block();
 
         log.info(command.sayMyName());
     }

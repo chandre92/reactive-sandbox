@@ -21,6 +21,6 @@ public class PersonCommand {
     private String lastName;
 
     public String sayMyName(){
-        return "My Name is " + firstName + " " + lastName + ".";
+        return "Command My Name is " + firstName + " " + lastName + ".";
     }
 }
